@@ -60,28 +60,28 @@
                         @foreach ($tasks as $task)
                             <tr>
                                 <!-- Task Name -->
-                                <td class="table-text">
+                                <td class="table-text" style = "border-width:2px !important">
                                     <div>{{ $task->title }}</div>
                                 </td>
-                                <td class="table-text">
+                                <td class="table-text" style = "border-width:2px !important">
                                     <div>{{ $task->description }}</div>
                                 </td>
 
-                                <td class="table-text">
+                                <td class="table-text" style = "border-width:2px !important">
                                     <!-- TODO: Delete Button -->
                                     <div>
                                         <form action="{{ url('edit/'.$task->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('POST') }}
                                  
-                                            <button type="submit" id="edit-task-{{ $task->id }}" class="btn btn-danger">
+                                            <button type="submit" id="edit-task-{{ $task->id }}" class="btn btn-primary">
                                                 <i class="fa fa-btn fa-trash"></i>Edit
                                             </button>
                                         </form>
                                     </div>
                                 </td>
  
-                                <td class="table-text">
+                                <td class="table-text" style = "border-width:2px !important">
                                     <!-- TODO: Delete Button -->
                                     <div>
                                         <form action="{{ url('task/'.$task->id) }}" method="POST">
